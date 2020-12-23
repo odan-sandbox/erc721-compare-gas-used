@@ -2,18 +2,18 @@ const hre = require("hardhat");
 
 async function main() {
     const signers = await hre.ethers.getSigners()
-    const MyERC721 = await hre.ethers.getContractFactory("ERC721Mintable");
+    const MyERC721 = await hre.ethers.getContractFactory("MyERC721");
     const myERC721 = await MyERC721.deploy();
 
      await myERC721.deployed();
 
-    const deployTransaction = myERC721.deployTransaction;
-    console.log(await hre.ethers.provider.getTransactionReceipt(deployTransaction.hash))
+    console.log(myERC721.deployTransaction)
 
     console.log("myERC721 deployed to:", myERC721.address);
-    const tx = await myERC721.functions["mint(address,uint256)"](signers[0].address, 1);
-    console.log(tx)
-    console.log(await hre.ethers.provider.getTransactionReceipt(tx.hash))
+    console.log(myERC721.populateTransaction)
+
+    console.log({signers})
+    console.log(await myERC721.functions["transferFrom(address,address,uint256)"](signers[0].a, signers[1], 1))
 }
 
 main()
