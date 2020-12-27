@@ -42,8 +42,7 @@ async function getTransferFromGasUsed(contract) {
 }
 
 
-
-task("measure", "deploy/mint/transferFrom のコストを計測", async () => {
+task("measure", "deploy/mint/transferFrom のコストを計測").setAction(async () => {
   const contractNames = [
     "Basic",
     "CaseBurnable",
@@ -64,7 +63,6 @@ task("measure", "deploy/mint/transferFrom のコストを計測", async () => {
     console.log("transferFrom", await getTransferFromGasUsed(instance))
 
   }
-
 })
 
 module.exports = {

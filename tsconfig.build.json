@@ -9,16 +9,12 @@
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
       "skipLibCheck": true,
-      "allowJs": true,
-      "typeRoots": [
-        "./node_modules/@types",
-        "./types"
-      ]
+      "allowJs": true
     },
     "include": [
       "./src/**/*.ts",
       "./types/**.ts",
-      "./hardhat.config.js"
+      "./hardhat.config.ts"
     ],
     "exclude": [
       "./src/**/*.spec.ts"
