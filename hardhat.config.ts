@@ -66,7 +66,15 @@ if (!privateKey) {
 }
 
 const config: HardhatUserConfig = {
-  solidity: "0.5.17",
+  solidity: {
+    version: "0.5.17",
+    settings: {
+      optimizer: {
+        enabled: false,
+        runs: 1000
+      }
+    }
+  },
   networks: {
     hardhat: {
       hardfork: "muirGlacier"
@@ -75,7 +83,7 @@ const config: HardhatUserConfig = {
       url: "https://ropsten.infura.io/v3/60d0008ec52149f5a639ba70fc6086df",
       accounts: [privateKey]
     }
-  }
+  },
 }
 
 export default config;
