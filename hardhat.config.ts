@@ -64,11 +64,7 @@ function getAccounts() {
   if (privateKey) {
     return [privateKey]
   }
-
-  return []
 }
-
-
 
 const config: HardhatUserConfig = {
   solidity: {
