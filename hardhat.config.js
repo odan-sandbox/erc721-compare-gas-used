@@ -30,7 +30,7 @@ async function getTransferFromGasUsed(contract) {
 
 
 
-task("deploy", "deploy", async () => {
+task("measure", "deploy/mint/transferFrom のコストを計測", async () => {
   const contractNames = [
     "Basic",
     "CaseBurnable",
