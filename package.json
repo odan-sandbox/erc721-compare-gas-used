@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "2.5.1"
+  },
+  "scripts": {
+    "build": "yarn hardhat compile"
   }
 }
