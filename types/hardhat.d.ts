@@ -1,4 +1,4 @@
-declare var task: typeof import("hardhat/config").task
+declare var task: typeof import("hardhat/config").task;
 
 // task 型がったので不要になった
 // declare function task(name: string, description?: string, action?: import("hardhat/types").ActionType<import("hardhat/types").ArgumentType>): import("hardhat/types").ConfigurableTaskDefinition;
