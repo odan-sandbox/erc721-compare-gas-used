@@ -3,6 +3,7 @@ require("@nomiclabs/hardhat-waffle");
 // declaration merging で hre.ethers を生やしているので反映する
 import "@nomiclabs/hardhat-ethers"
 
+import { HardhatUserConfig } from "hardhat/config";
 import {task} from "hardhat/config"
 import {Contract}  from "@ethersproject/contracts"
 import {HardhatRuntimeEnvironment} from "hardhat/types"
@@ -58,8 +59,14 @@ task("measure", "deploy/mint/transferFrom のコストを計測").setAction(asyn
   }
 })
 
-module.exports = {
+const config: HardhatUserConfig = {
   solidity: "0.5.17",
-  hardfork: "muirGlacier"
-};
+  networks: {
+    hardhat: {
+      hardfork: "muirGlacier"
+    }
+  }
+}
+
+export default config;
 
