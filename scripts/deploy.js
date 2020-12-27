@@ -1,3 +1,5 @@
+// @ts-check
+
 const hre = require("hardhat");
 
 async function main() {
@@ -13,7 +15,7 @@ async function main() {
     console.log(myERC721.populateTransaction)
 
     console.log({signers})
-    console.log(await myERC721.functions["transferFrom(address,address,uint256)"](signers[0].a, signers[1], 1))
+    console.log(await myERC721.functions["transferFrom(address,address,uint256)"](signers[0], signers[1], 1))
 }
 
 main()
