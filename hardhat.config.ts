@@ -59,11 +59,21 @@ task("measure", "deploy/mint/transferFrom のコストを計測").setAction(asyn
   }
 })
 
+const privateKey = process.env.PRIVATE_KEY
+
+if (!privateKey) {
+  throw new Error("privateKey を指定してね")
+}
+
 const config: HardhatUserConfig = {
   solidity: "0.5.17",
   networks: {
     hardhat: {
       hardfork: "muirGlacier"
+    },
+    ropsten: {
+      url: "https://ropsten.infura.io/v3/60d0008ec52149f5a639ba70fc6086df",
+      accounts: [privateKey]
     }
   }
 }
