@@ -1,6 +1,7 @@
 // @ts-check
 require("@nomiclabs/hardhat-waffle");
 import "solidity-coverage"
+import "hardhat-jest-plugin";
 // declaration merging で hre.ethers を生やしているので反映する
 import "@nomiclabs/hardhat-ethers"
 
