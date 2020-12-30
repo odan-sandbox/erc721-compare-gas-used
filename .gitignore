@@ -111,3 +111,4 @@ cache
 artifacts
 
 coverage.json
+types/ethers-contracts

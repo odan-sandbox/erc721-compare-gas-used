@@ -3,3 +3,5 @@ artifacts
 
 coverage.json
 coverage
+
+types/ethers-contracts
