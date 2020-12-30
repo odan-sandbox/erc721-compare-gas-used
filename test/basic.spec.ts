@@ -6,7 +6,9 @@ expect.extend(waffleJest);
 
 describe("Basic", function () {
   it("poyo", async () => {
-    const Basic = (await hre.ethers.getContractFactory("Basic")) as BasicFactory;
+    const Basic = (await hre.ethers.getContractFactory(
+      "Basic"
+    )) as BasicFactory;
     const basic = await Basic.deploy();
 
     await basic.deployed();
