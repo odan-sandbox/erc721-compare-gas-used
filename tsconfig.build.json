@@ -12,6 +12,6 @@
     "allowJs": true,
     "types": ["@nomiclabs/hardhat-ethers"]
   },
-  "include": ["./src/**/*.ts", "./types/**.ts", "./hardhat.config.ts"],
-  "exclude": ["./src/**/*.spec.ts"]
+  "include": ["./scripts/**/*.ts", "./types/**.ts", "./hardhat.config.ts"],
+  "exclude": ["./scripts/**/*.spec.ts"]
 }
